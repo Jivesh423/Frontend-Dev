@@ -1,54 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Responsive Layout</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-    }
-    header {
-      background: #0f172a;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-    }
-    .container {
-      display: flex;
-      flex-wrap: wrap;
-    }
-    .left, .right {
-      flex: 1;
-      padding: 40px;
-    }
-    .left {
-      background: #38bdf8;
-      color: white;
-    }
-    .right {
-      background: #f1f5f9;
-      color: #0f172a;
-    }
-    @media (max-width: 768px) {
-      .container { flex-direction: column; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advanced CSS Selectors</title>
+<style>
+/* Attribute selector */
+input[type="text"] { border: 2px solid blue; }
+/* Starts-with selector */
+a[href^="https"] { color: green; }
+/* Pseudo-class */
+li:hover { color: red; }
+/* Pseudo-element */
+li::before { content: "👉 "; }
+/* nth-child selector */
+li:nth-child(2) { font-weight: bold; }
+/* Combinators */
+div > p { color: purple; } /* direct child */
+p + span { color: orange; } /* adjacent sibling */
+p ~ b { color: teal; } /* general sibling */
+</style>
 </head>
 <body>
-  <header>
-    <h1>Responsive Two-Column Layout</h1>
-  </header>
-  <div class="container">
-    <div class="left">
-      <h2>Left Column</h2>
-      <p>This section contains main content with a colorful background.</p>
-    </div>
-    <div class="right">
-      <h2>Right Column</h2>
-      <p>This section adjusts below the left column on smaller screens.</p>
-    </div>
+  <input type="text" placeholder="Type here">
+  <a href="https://example.com">Secure Link</a>
+  <ul>
+    <li>Apple</li>
+    <li>Banana</li>
+    <li>Cherry</li>
+  </ul>
+  <div>
+    <p>Paragraph inside div</p>
+    <span>Next to paragraph</span>
+    <b>Bold text sibling</b>
   </div>
 </body>
 </html>

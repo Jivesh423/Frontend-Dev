@@ -1,146 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Favorite Destination – Goa</title>
-  <style>
-    
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      color: #fff;
-      line-height: 1.6;
-    }
-
-    header {
-      background: #0f172a;
-      padding: 1.5em;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 1.8rem;
-      color: #38bdf8;
-    }
-
-    nav {
-      margin-top: 0.5em;
-    }
-
-    nav a {
-      color: #e2e8f0;
-      text-decoration: none;
-      margin: 0 1em;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      color: #38bdf8;
-    }
-    section {
-      padding: 80px 20px;
-      text-align: center;
-      border-bottom: 2px solid rgba(255, 255, 255, 0.1);
-    }
-
-    section h2 {
-      font-size: 2rem;
-      margin-bottom: 0.5em;
-    }
-
-    section p {
-      max-width: 800px;
-      margin: 0 auto;
-      font-size: 1.1rem;
-    }
-
-    .linear-gradient {
-      background: linear-gradient(135deg, #0ea5e9, #9333ea);
-    }
-
-    .radial-gradient {
-      background: radial-gradient(circle, #0ea5a4, #0f172a);
-    }
-
-    .parallax1 {
-      background-image: url('https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1500&q=80');
-      background-size: cover;
-      background-attachment: fixed;
-      background-position: center;
-    }
-
-    .parallax2 {
-      background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1500&q=80');
-      background-size: cover;
-      background-attachment: fixed;
-      background-position: center;
-    }
-
-    footer {
-      background: #0f172a;
-      padding: 1em 0;
-      text-align: center;
-      font-size: 0.9rem;
-      color: #cbd5e1;
-    }
-
-    @media (max-width: 600px) {
-      section h2 { font-size: 1.5rem; }
-      section p { font-size: 1rem; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Height and Width Practice</title>
+<style>
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 20px;
+  background: #eee;
+}
+.box {
+  text-align: center;
+  color: white;
+  overflow: auto;
+}
+.box1 { width: 150px; height: 100px; background: #ff5733; }
+.box2 { width: 20%; height: 20vh; background: #28a745; min-height: 100px; }
+.box3 { width: 10em; height: 8em; background: #007bff; max-width: 200px; }
+</style>
 </head>
 <body>
-
-  <header>
-    <h1>Discover Goa 🌴</h1>
-    <nav>
-      <a href="#intro">Home</a>
-      <a href="#culture">Culture</a>
-      <a href="#beaches">Beaches</a>
-      <a href="#food">Food</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
-
-  <main>
-    <section id="intro" class="linear-gradient">
-      <h2>Welcome to Goa</h2>
-      <p>
-        Goa, India’s beach paradise, is famous for its golden sand, vibrant nightlife, and rich blend of Indian and Portuguese cultures.
-      </p>
-    </section>
-
-    <section id="culture" class="radial-gradient">
-      <h2>Cultural Heritage</h2>
-      <p>
-        Goa is home to ancient churches, colorful festivals, and music that fills the air. It’s a perfect mix of tradition and modernity.
-      </p>
-    </section>
-
-    <section id="beaches" class="parallax1">
-      <h2>Stunning Beaches</h2>
-      <p>
-        Enjoy sunbathing at Calangute, party at Baga, or relax at Palolem. Each beach tells its own story under the sunset sky.
-      </p>
-    </section>
-
-    <section id="food" class="parallax2">
-      <h2>Delicious Cuisine</h2>
-      <p>
-        From spicy seafood curries to fresh coconut drinks, Goan cuisine is a burst of coastal flavor you’ll never forget.
-      </p>
-    </section>
-  </main>
-
-  <footer id="contact">
-    © 2025 Explore Goa | Designed by Jivu Sorout
-  </footer>
-
+  <div class="box box1">px</div>
+  <div class="box box2">%, vh</div>
+  <div class="box box3">em</div>
 </body>
 </html>

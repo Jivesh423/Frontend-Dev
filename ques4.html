@@ -1,63 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registration Form</title>
-  <style>
-    body {
-      background: linear-gradient(120deg, #38bdf8, #9333ea);
-      font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-    }
-    form {
-      background: white;
-      padding: 30px;
-      border-radius: 12px;
-      width: 320px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    }
-    h2 { text-align: center; color: #0f172a; }
-    label { display: block; margin: 10px 0 5px; font-weight: bold; }
-    input, select {
-      width: 100%;
-      padding: 10px;
-      border: 1px solid #cbd5e1;
-      border-radius: 6px;
-    }
-    button {
-      margin-top: 15px;
-      width: 100%;
-      background: #0f172a;
-      color: white;
-      padding: 10px;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-    button:hover { background: #1e293b; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shadows and Depth</title>
+<style>
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  height: 100vh;
+  background: #f4f4f4;
+}
+.card {
+  width: 200px;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+.card h3 { text-shadow: 2px 2px 4px gray; }
+.card1 { box-shadow: 2px 2px 8px rgba(0,0,0,0.3); }
+.card2 { box-shadow: 4px 4px 10px rgba(0,0,0,0.4); }
+.card3 { box-shadow: 6px 6px 15px rgba(0,0,0,0.5); }
+.card:hover { transform: translateY(-10px); box-shadow: 10px 10px 25px rgba(0,0,0,0.5); }
+</style>
 </head>
 <body>
-  <form>
-    <h2>Student Registration</h2>
-    <label for="name">Full Name</label>
-    <input type="text" id="name" placeholder="Enter your name" required>
-    <label for="roll">Roll Number</label>
-    <input type="text" id="roll" placeholder="Enter roll number" required>
-    <label for="course">Course</label>
-    <select id="course" required>
-      <option selected disabled>Select Course</option>
-      <option>BCA</option>
-      <option>BBA</option>
-      <option>B.Tech</option>
-      <option>MCA</option>
-    </select>
-    <button type="submit">Register</button>
-  </form>
+  <div class="card card1"><h3>Card 1</h3><p>Soft shadow</p></div>
+  <div class="card card2"><h3>Card 2</h3><p>Medium shadow</p></div>
+  <div class="card card3"><h3>Card 3</h3><p>Deep shadow</p></div>
 </body>
 </html>
