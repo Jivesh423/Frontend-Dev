@@ -1,41 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Daily News</title>
-  <style>
-    body {
-      font-family: 'Georgia', serif;
-      background: #f9fafb;
-      padding: 40px;
-      text-align: justify;
-    }
-    h1 {
-      column-span: all;
-      text-align: center;
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
-    .content {
-      column-count: 3;
-      column-gap: 40px;
-    }
-    img {
-      float: left;
-      margin: 5px 15px 5px 0;
-      border-radius: 5px;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Card Flip</title>
+<style>
+body{display:flex;align-items:center;justify-content:center;height:100vh;background:#e0f7fa;}
+.container{perspective:1000px;}
+.card{
+  width:250px;height:160px;position:relative;
+  transform-style:preserve-3d;transition:transform .7s;
+}
+.card:hover{transform:rotateY(180deg);}
+.side{
+  position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  border-radius:10px;backface-visibility:hidden;font-size:18px;
+}
+.front{background:#fff;}
+.back{background:#0077b6;color:#fff;transform:rotateY(180deg);}
+</style>
 </head>
 <body>
-  <h1>Today's Highlights</h1>
-  <div class="content">
-    <img src="https://via.placeholder.com/150" alt="news">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tincidunt velit vitae justo ultricies, a facilisis elit fermentum.</p>
-    <p>Integer sodales, massa non volutpat posuere, nulla libero facilisis elit, vel tincidunt est risus et nisl. Cras sed justo lorem.</p>
-    <p>Curabitur sit amet elit vitae velit gravida hendrerit. Maecenas vel ex sapien. Sed in neque sed risus eleifend sagittis.</p>
-    <p>Donec mattis, felis ac commodo interdum, ante enim cursus turpis, eget sagittis libero ligula id ligula.</p>
+<div class="container">
+  <div class="card">
+    <div class="side front">Front Side</div>
+    <div class="side back">Back Description</div>
   </div>
+</div>
 </body>
 </html>
